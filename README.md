@@ -2,7 +2,8 @@
 
 A responsive static landing page for Current, a conversational AI calendar product concept.
 It includes a scrolling product story with fade-in sections and an interactive
-mock prompt demo.
+current-month calendar demo. Preset or typed prompts update the sample events,
+and changes accumulate until you choose **Reset demo**.
 
 ## Run locally
 

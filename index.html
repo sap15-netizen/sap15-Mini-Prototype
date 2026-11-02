@@ -56,7 +56,7 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal reveal-late" id="try-it">
+        <div class="hero-visual reveal reveal-late" id="calendar-preview">
           <div class="visual-glow" aria-hidden="true"></div>
           <div class="calendar-window">
             <div class="window-topbar">
@@ -181,34 +181,58 @@
         </div>
       </section>
 
-      <section class="demo-section section-shell">
+      <section class="demo-section section-shell" id="try-it">
         <div class="demo-heading reveal">
           <div class="eyebrow"><span class="eyebrow-dot"></span> Your turn</div>
-          <h2>What would make<br />today feel <span>easier?</span></h2>
-          <p>Try a prompt. Your demo calendar will take it from here.</p>
+          <h2>Make a change.<br /><span>See it happen.</span></h2>
+          <p>Try an example to update your calendar. Changes stick around until you reset the demo.</p>
         </div>
-        <div class="demo-panel reveal reveal-late">
-          <div class="demo-panel-top">
-            <div class="demo-avatar" aria-hidden="true">✳</div>
-            <div><strong>Current</strong><span>Your calendar assistant</span></div>
-            <span class="demo-status"><i></i> HERE WITH YOU</span>
-          </div>
-          <div class="demo-messages" aria-live="polite" aria-atomic="false">
-            <div class="assistant-message">Hi! Tell me what you’d like to change, and I’ll take care of the details.</div>
-          </div>
-          <div class="demo-schedule-update" aria-live="polite" hidden>
-            <span class="update-icon" aria-hidden="true">✓</span>
-            <div><span class="update-label">SCHEDULE PREVIEW</span><strong class="update-title"></strong><span class="update-time"></span></div>
-          </div>
-          <form class="prompt-form">
-            <label class="sr-only" for="prompt-input">Tell Current what to do with your schedule</label>
-            <textarea id="prompt-input" rows="1" placeholder="Try “Move my focus time to tomorrow morning”"></textarea>
-            <button type="submit" class="send-button" aria-label="Send prompt">↑</button>
-          </form>
-          <div class="prompt-suggestions">
-            <span>NOT SURE? TRY</span>
-            <button type="button" data-prompt="Move my focus time to tomorrow morning">Move my focus time</button>
-            <button type="button" data-prompt="Add lunch with Maya Friday at noon">Plan a lunch</button>
+        <div class="demo-workspace reveal reveal-late">
+          <section class="month-calendar" aria-labelledby="calendar-month">
+            <div class="month-calendar-header">
+              <div>
+                <span class="calendar-overline">YOUR MONTH</span>
+                <h3 id="calendar-month"></h3>
+              </div>
+              <span class="calendar-sync"><i></i> UP TO DATE</span>
+            </div>
+            <div class="month-weekdays" aria-hidden="true">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+              <span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+            <div class="month-grid" role="group" aria-label="Current month calendar"></div>
+            <div class="calendar-legend">
+              <span><i class="legend-dot legend-meeting"></i> Meeting</span>
+              <span><i class="legend-dot legend-personal"></i> Personal</span>
+              <span><i class="legend-dot legend-travel"></i> Travel & reminders</span>
+            </div>
+          </section>
+          <div class="demo-panel">
+            <div class="demo-panel-top">
+              <div class="demo-avatar" aria-hidden="true">✳</div>
+              <div><strong>Current</strong><span>Your calendar assistant</span></div>
+              <span class="demo-status"><i></i> HERE WITH YOU</span>
+            </div>
+            <div class="demo-messages" aria-live="polite" aria-atomic="false">
+              <div class="assistant-message">Hi! Try an example or tell me how you’d like to update your plans.</div>
+            </div>
+            <div class="example-prompt">
+              <span class="example-label">TRY THIS</span>
+              <p class="example-text"></p>
+              <div class="example-actions">
+                <button type="button" class="next-example">Next example <span aria-hidden="true">↗</span></button>
+                <button type="button" class="run-example">Run this example <span aria-hidden="true">→</span></button>
+              </div>
+            </div>
+            <form class="prompt-form">
+              <label class="sr-only" for="prompt-input">Tell Current what to do with your schedule</label>
+              <textarea id="prompt-input" rows="1" placeholder="Or type your own request..."></textarea>
+              <button type="submit" class="send-button" aria-label="Send prompt">↑</button>
+            </form>
+            <div class="demo-controls">
+              <span class="demo-persistence"><i></i> Changes stay until you reset</span>
+              <button type="button" class="reset-demo">Reset demo</button>
+            </div>
           </div>
         </div>
       </section>

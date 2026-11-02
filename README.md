@@ -1,6 +1,6 @@
-# Daymark
+# Current
 
-A responsive static landing page for a conversational AI calendar product concept.
+A responsive static landing page for Current, a conversational AI calendar product concept.
 It includes a scrolling product story with fade-in sections and an interactive
 mock prompt demo.
 
